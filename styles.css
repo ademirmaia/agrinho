@@ -1,0 +1,255 @@
+/* ===== CONFIGURAÇÕES GLOBAIS E VARIÁVEIS ===== */
+:root {
+  /* Modo Claro (Padrão) - Define as cores usadas quando o site abre */
+  --bg-primary: #f8fafc; /* Cor de fundo principal (cinza quase branco) */
+  --bg-secondary: #ffffff; /* Cor de fundo secundária (branco puro) */
+  --text-main: #1e293b; /* Cor do texto principal (azul escuro/cinza ardósia) */
+  --text-muted: #64748b; /* Cor de textos secundários/apagados (cinza médio) */
+  --accent: #2e8b57; /* Cor de destaque do site (Verde Mar Aberto / "SeaGreen") */
+  --accent-light: #e2f0e9; /* Tom de verde muito claro para fundos e hovers */
+  --card-bg: #ffffff; /* Fundo dos blocos de conteúdo */
+  --border-color: #e2e8f0; /* Cor padrão para linhas divisorias e bordas */
+  --hero-bg: linear-gradient(135deg, #1e4620 0%, #2e8b57 100%); /* Degradê verde do cabeçalho principal */
+  --hero-text: #ffffff; /* Cor do texto dentro da seção de destaque (branco) */
+  --radius: 14px; /* Arredondamento padrão para os cantos dos blocos */
+}
+
+/* Seletores para o Modo Escuro */
+.dark-mode {
+  /* Altera o valor das variáveis de cores caso a classe '.dark-mode' seja aplicada na tag HTML */
+  --bg-primary: #090f16; /* Fundo principal escuro */
+  --bg-secondary: #0f172a; /* Fundo secundário ainda mais escuro */
+  --text-main: #f1f5f9; /* Texto principal em branco fosco */
+  --text-muted: #94a3b8; /* Texto apagado em cinza claro */
+  --card-bg: #1e293b; /* Fundo dos blocos adaptados para o escuro */
+  --border-color: #334155; /* Linhas divisórias em cinza grafite */
+  --accent-light: rgba(46, 139, 87, 0.2); /* Verde de destaque com transparência para o modo escuro */
+}
+
+* {
+  box-sizing: border-box; /* Garante que a largura total inclua bordas e espaçamentos internos sem quebrar o layout */
+  margin: 0; /* Remove as margens padrões que os navegadores colocam nos elementos */
+  padding: 0; /* Remove os preenchimentos internos padrões dos elementos */
+}
+
+html {
+  font-size: 16px; /* Tamanho padrão de fonte do site (que o JavaScript manipula) */
+  scroll-behavior: smooth; /* Faz com que os links internos rolem a página suavemente em vez de dar um salto */
+}
+
+body {
+  font-family:
+    "Poppins",
+    system-ui,
+    -apple-system,
+    sans-serif; /* Define a fonte do site (prioriza Poppins, se não houver, usa fontes nativas do sistema) */
+  background-color: var(--bg-primary); /* Aplica a cor de fundo dinamicamente baseada na variável */
+  color: var(--text-main); /* Aplica a cor de texto baseada na variável */
+  transition:
+    background-color 0.3s,
+    color 0.3s; /* Faz uma transição suave de 0.3 segundos ao trocar entre modo claro e escuro */
+  line-height: 1.6; /* Define o espaçamento entre linhas de texto para uma leitura confortável */
+}
+
+.container {
+  max-width: 1100px; /* Limita a largura máxima do conteúdo do site para telas grandes */
+  margin: 0 auto; /* Centraliza o bloco na horizontal */
+  padding: 1.5rem; /* Adiciona um espaço de segurança nas laterais */
+}
+
+/* ===== HEADER E NAVEGAÇÃO ===== */
+.site-header {
+  background-color: var(--bg-secondary); /* Cor de fundo do cabeçalho */
+  border-bottom: 1px solid var(--border-color); /* Linha fina na parte inferior do cabeçalho */
+  position: sticky; /* Faz o menu de navegação ficar fixado no topo ao rolar a página */
+  top: 0; /* Alinha a fixação exatamente no topo da tela */
+  z-index: 100; /* Garante que o menu flutue por cima de outros conteúdos do site */
+  transition: background-color 0.3s; /* Transição suave na mudança de cor do fundo */
+}
+
+.header-inner {
+  display: flex; /* Ativa o flexbox para alinhar itens em linha */
+  align-items: center; /* Centraliza os itens verticalmente */
+  justify-content: space-between; /* Empurra a logo para o lado esquerdo e os links para o direito */
+}
+
+.brand {
+  color: var(--accent); /* Cor do texto da logo (verde) */
+  font-weight: 700; /* Deixa a logo em negrito bem destacado */
+  font-size: 1.5rem; /* Aumenta o tamanho da logo */
+}
+
+.main-nav ul {
+  display: flex; /* Organiza os itens da lista de links em linha */
+  gap: 1.25rem; /* Define o espaçamento entre cada um dos links */
+  list-style: none; /* Remove as bolinhas da lista */
+}
+
+.main-nav a {
+  text-decoration: none; /* Remove o sublinhado padrão dos links */
+  color: var(--text-muted); /* Texto do link começa com uma cor mais discreta */
+  font-weight: 600; /* Deixa o texto do link levemente em negrito */
+  font-size: 0.9rem; /* Tamanho do texto do link */
+  transition: color 0.2s; /* Transição rápida na mudança de cor do link no hover */
+}
+
+.main-nav a:hover {
+  color: var(--accent); /* Quando o mouse passa por cima, o link fica verde */
+}
+
+/* ===== HERO SECTION (Área de Destaque) ===== */
+.hero {
+  background: var(--hero-bg); /* Aplica o degradê de fundo verde */
+  color: var(--hero-text); /* Define a cor do texto (branco) */
+  padding: 4rem 0; /* Espaçamento generoso em cima e embaixo */
+  text-align: left; /* Alinha os textos para o lado esquerdo */
+}
+
+.hero-grid {
+  display: grid; /* Ativa o sistema de Grid para dividir o espaço */
+  grid-template-columns: 1fr 300px; /* Cria duas colunas: uma flexível e outra com exatos 300px (para a imagem/ilustração) */
+  gap: 2rem; /* Espaço de separação entre as duas colunas */
+  align-items: center; /* Centraliza os conteúdos verticalmente na linha */
+}
+
+.hero-text h2 {
+  font-size: 2.2rem; /* Tamanho grande para o título principal */
+  line-height: 1.2; /* Junta um pouco mais as linhas do título para melhor estética */
+  margin-bottom: 1rem; /* Dá um espaço até o texto de baixo */
+}
+
+.hero-text p {
+  font-size: 1.1rem; /* Texto de apoio levemente maior que o normal */
+  margin-bottom: 1.5rem; /* Margem até um eventual botão ou final da seção */
+  opacity: 0.9; /* Deixa o texto sutilmente transparente para harmonizar com o fundo */
+}
+
+.hero-visual {
+  display: flex; /* Configura flexbox para alinhar o item visual */
+  justify-content: center; /* Centraliza a ilustração na sua própria coluna */
+}
+
+.plant {
+  width: 200px; /* Define largura fixa de 200px para o elemento gráfico da planta */
+  height: 200px; /* Define altura fixa de 200px */
+  color: #ffffff; /* Caso use SVG interno, define a cor padrão do elemento como branco */
+}
+
+/* ===== CONTEÚDO E ARTIGOS ===== */
+.content {
+  background-color: var(--bg-secondary); /* Fundo branco ou azul escuro para o bloco */
+  border: 1px solid var(--border-color); /* Borda fina contornando o conteúdo */
+  padding: 2.5rem; /* Preenchimento interno do artigo */
+  border-radius: var(--radius); /* Arredonda os cantos usando os 14px da variável */
+  margin: 2rem auto; /* Espaçamento externo em cima/baixo e centraliza nas laterais */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Aplica uma sombra bem leve e moderna */
+  transition:
+    background-color 0.3s,
+    border-color 0.3s; /* Transição de cor suave para transição de modos */
+}
+
+.blog-post h2 {
+  font-size: 1.8rem; /* Tamanho do título da postagem do blog */
+  color: var(--accent); /* Cor verde no título do post */
+  margin-bottom: 0.25rem; /* Pequena margem abaixo do título */
+}
+
+.blog-post .meta {
+  font-size: 0.85rem; /* Fonte menor para dados secundários (autor, data) */
+  color: var(--text-muted); /* Cor de texto discreta */
+  margin-bottom: 1.5rem; /* Espaço considerável até o início do texto do artigo */
+  text-transform: uppercase; /* Força todas as letras a ficarem em maiúsculo */
+  letter-spacing: 0.5px; /* Aumenta sutilmente a distância entre as letras */
+}
+
+.blog-post h3 {
+  font-size: 1.3rem; /* Tamanho para subtítulos dentro do artigo */
+  margin: 1.5rem 0 0.5rem 0; /* Margens: 1.5rem acima, zero nas laterais, 0.5rem abaixo */
+  color: var(--text-main); /* Cor padrão do texto principal */
+}
+
+.blog-post p {
+  margin-bottom: 1rem; /* Espaçamento entre parágrafos */
+  color: var(--text-main); /* Cor padrão do texto principal */
+  text-align: justify; /* Alinha o texto de forma justificada nas laterais */
+}
+
+.blog-post ul,
+.blog-post ol {
+  margin-left: 1.5rem; /* Recuo à esquerda para os itens de lista não ficarem colados */
+  margin-bottom: 1.5rem; /* Espaço após terminar uma lista */
+}
+
+.blog-post li {
+  margin-bottom: 0.5rem; /* Espaçamento vertical individual entre cada linha de lista */
+}
+
+/* ===== BARRA DE ACESSIBILIDADE FLUTUANTE ===== */
+.a11y-toolbar {
+  position: fixed; /* Fixa o menu em uma posição absoluta na tela do usuário, independente de rolagens */
+  right: 1.5rem; /* Fixa a 1.5rem de distância da borda direita da tela */
+  bottom: 1.5rem; /* Fixa a 1.5rem de distância da borda inferior da tela */
+  background-color: var(--bg-secondary); /* Cor de fundo da barra */
+  border: 1px solid var(--border-color); /* Borda do contorno da barra */
+  border-radius: 30px; /* Bordas totalmente arredondadas (estilo pílula) */
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15); /* Sombra marcante para dar efeito de flutuação 3D */
+  padding: 0.5rem; /* Espaço interno para afastar os botões da borda da barra */
+  display: flex; /* Coloca os botões um ao lado do outro em linha */
+  gap: 0.5rem; /* Espaçamento entre os botões */
+  align-items: center; /* Centraliza os botões verticalmente */
+  z-index: 1000; /* Valor altíssimo para garantir que fique por cima de ABSOLUTAMENTE tudo no site */
+  transition:
+    background-color 0.3s,
+    border-color 0.3s; /* Transição suave de cores */
+}
+
+.a11y-toolbar .a11y-btn {
+  background: transparent; /* Remove o fundo padrão cinza de botões */
+  border: 0; /* Remove a borda padrão do navegador */
+  width: 40px; /* Largura perfeita para clique em telas de toque */
+  height: 40px; /* Altura perfeita para clique */
+  border-radius: 50%; /* Transforma o botão em um círculo perfeito */
+  cursor: pointer; /* Transforma o cursor do mouse na "mãozinha" de clique */
+  font-weight: 700; /* Deixa os textos internos (A+, A-) em negrito */
+  color: var(--text-main); /* Cor dos ícones/letras conforme o modo */
+  display: flex; /* Flexbox para alinhar o conteúdo interno */
+  align-items: center; /* Centraliza o ícone/letra verticalmente */
+  justify-content: center; /* Centraliza o ícone/letra horizontalmente */
+  transition: background-color 0.2s; /* Transição de cor veloz para o efeito de hover */
+}
+
+.a11y-toolbar .a11y-btn:hover {
+  background-color: var(--accent-light); /* Adiciona o fundo verde claro ao passar o mouse */
+  color: var(--accent); /* Altera o texto/ícone interno para verde escuro */
+}
+
+/* ===== RODAPÉ ===== */
+.site-footer {
+  background-color: var(--bg-secondary); /* Cor de fundo do rodapé */
+  border-top: 1px solid var(--border-color); /* Linha divisória cinza no topo do rodapé */
+  padding: 1.5rem 0; /* Espaçamento interno */
+  text-align: center; /* Centraliza os créditos e o ano atual */
+  color: var(--text-muted); /* Cor de texto mais sutil */
+  margin-top: 4rem; /* Garante que o rodapé fique bem afastado do conteúdo de cima */
+}
+
+/* ===== RESPONSIVIDADE (Telas de Celular/Tablet) ===== */
+@media (max-width: 768px) {
+  /* Todas as regras aqui dentro só funcionam se a tela do dispositivo tiver 768px de largura ou menos */
+  .hero-grid {
+    grid-template-columns: 1fr; /* Transforma a grade de duas colunas em uma única coluna vertical */
+    text-align: center; /* Centraliza todos os textos do topo no celular */
+  }
+  .hero-text {
+    order: 2; /* Inverte a ordem no celular: o texto passa a ficar abaixo da imagem */
+  }
+  .hero-visual {
+    order: 1; /* Inverte a ordem no celular: a imagem do topo passa a aparecer primeiro */
+  }
+  .main-nav {
+    display: none; /* Esconde o menu tradicional de links em telas pequenas para evitar quebra de layout */
+  }
+  .content {
+    padding: 1.5rem; /* Reduz o espaçamento interno do artigo para economizar espaço de tela nos celulares */
+  }
+}

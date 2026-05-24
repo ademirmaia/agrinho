@@ -1,0 +1,313 @@
+<!--
+Aqui está a lista com o que cada tag do seu código faz:
+<!doctype html>: Avisa ao navegador que o site usa a versão mais moderna do HTML (HTML5).
+<html lang="pt-BR">: É a tag raiz que engloba todo o código do site e define o idioma como português do Brasil.
+<head>: Guarda as configurações "invisíveis" da página, como links de fontes externas e o título da aba.
+<body>: Guarda toda a parte visível do site, ou seja, tudo o que o usuário consegue ver e interagir.
+<header>: Define o topo ou cabeçalho da página, geralmente usado para destacar o nome da marca ou o menu.
+<main>: Indica qual é o conteúdo principal e mais importante daquela página.
+<section>: Separa o site em grandes blocos ou seções de assuntos diferentes.
+<article>: Isola um bloco de conteúdo que faz sentido por si só, como um artigo completo de um blog.
+<div>: Uma caixa genérica usada apenas para agrupar elementos, organizar o layout ou aplicar estilos visuais depois.
+<footer>: Define o rodapé do site, que fica lá no final da página com informações de direitos autorais ou ano.
+<h1>: O título principal e de maior importância da página (no seu caso, o nome "Agrinho").
+<h2>: Títulos secundários, usados para abrir as seções ou os temas dos artigos.
+<h3>: Subtítulos de menor importância, usados para dividir os assuntos dentro de um artigo.
+<p>: Cria parágrafos de texto comum para leituras e explicações.
+<strong>: Destaca um trecho de texto em negrito, indicando para o navegador e para o Google que aquela palavra é muito importante.
+<span>: Isola uma palavra ou número pequeno dentro de uma linha de texto, sem quebrar a linha, geralmente para mudar a cor ou estilo dela.
+<ul>: Cria uma lista com marcadores de bolinhas (lista não ordenada).
+<ol>: Cria uma lista numerada sequencialmente (lista ordenada).
+<li>: Indica cada um dos itens que vai dentro de uma lista (seja ela de bolinhas ou numerada).
+<img>: Coloca uma imagem na tela usando um link de origem (src) e um texto descritivo de acessibilidade (alt).
+<script>: Conecta um arquivo de JavaScript ao HTML para adicionar funções dinâmicas e interativas na página.
+-->
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Futuro Sustentável da Agronomia — Agrinho</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="brand">Agrinho</h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <h2>
+              O futuro sustentável da agronomia começa no campo, com ciência e
+              cuidado.
+            </h2>
+            <p>
+              Exploramos práticas regenerativas, tecnologia responsável e
+              iniciativas que equilibram produtividade e saúde do planeta.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="ia" class="content container">
+        <article class="blog-post">
+          <header>
+            <h2>
+              Sistemas de Monitoramento com IA: A Revolução de Dados no Campo
+            </h2>
+            <p class="meta">Tecnologia Ética &bull; Leitura Avançada</p>
+          </header>
+
+          <h3>O Conceito e a Ideia</h3>
+          <p>
+            A agricultura moderna deixou de ser uma atividade baseada apenas na
+            intuição e no histórico climático para se tornar uma ciência
+            orientada por dados. Os
+            <strong>Sistemas de Monitoramento com IA</strong> integram hardware
+            de ponta — como sensores de solo e drones — a algoritmos de
+            aprendizado de máquina para transformar variáveis físicas em
+            decisões estratégicas em tempo real. A ideia central é a
+            <strong>hiperlocalização</strong>: em vez de tratar uma fazenda como
+            uma unidade homogênea, a IA permite gerenciar cada metro quadrado de
+            forma individualizada, maximizando a eficiência e mitigando riscos
+            antes que eles afetem a safra.
+          </p>
+
+          <img
+            src="https://plus.unsplash.com/premium_photo-1664475382326-3dc5510e4ff9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWdyaWN1bHR1cmElMjBkcm9uZXxlbnwwfHwwfHx8MA%3D%3D"
+            alt="Sistemas de Monitoramento com IA"
+            class="article-image"
+          />
+
+          <h3>Como Funciona a Tecnologia</h3>
+          <p>
+            O ecossistema de monitoramento opera em três camadas principais:
+          </p>
+          <ul>
+            <li>
+              <strong>Coleta Subterrânea (Sensores de Solo):</strong>
+              Dispositivos IoT enterrados em pontos estratégicos medem
+              continuamente a umidade, temperatura, condutividade elétrica e os
+              níveis de nutrientes (NPK: Nitrogênio, Fósforo e Potássio).
+            </li>
+            <li>
+              <strong>Coleta Aérea (Drones e Imagens de Satélite):</strong>
+              Drones equipados com câmeras multiespectrais e térmicas sobrevoam
+              a plantação. Eles captam comprimentos de onda de luz invisíveis ao
+              olho humano, gerando índices de vegetação como o NDVI.
+            </li>
+            <li>
+              <strong>Processamento e IA:</strong> O cérebro do sistema cruza os
+              dados do solo com as imagens aéreas e a previsão do tempo para
+              identificar anomalias hídricas e focos iniciais de pragas.
+            </li>
+          </ul>
+
+          <h3>O Modelo de Negócio</h3>
+          <p>
+            O mercado para essa tecnologia é altamente escalável e geralmente
+            estruturado como
+            <strong
+              >SaaS (Software as a Service) combinado com a venda ou aluguel de
+              hardware</strong
+            >. As AgTechs comercializam os sensores e cobram uma mensalidade
+            pelo acesso ao painel de controle preditivo, compartilhando os
+            riscos de risco de safra também com seguradoras autorizadas.
+          </p>
+        </article>
+      </section>
+
+      <section id="vertical" class="content container">
+        <article class="blog-post">
+          <header>
+            <h2>
+              Agricultura Vertical Urbana: O Futuro do Abastecimento nas Cidades
+            </h2>
+            <p class="meta">Espaços Reduzidos &bull; Soluções Modulares</p>
+          </header>
+
+          <h3>O Conceito e a Ideia</h3>
+          <p>
+            Até 2050, estima-se que cerca de 70% da população mundial viverá em
+            áreas urbanas. A <strong>Agricultura Vertical Urbana</strong> surge
+            como uma resposta direta à necessidade de produzir alimentos perto
+            do centro de consumo, reduzindo a pegada de carbono do transporte e
+            o desperdício pós-colheita. Através de
+            <strong>hortas modulares</strong>, esse modelo utiliza estruturas
+            verticais para empilhar plantações em ambientes controlados,
+            otimizando o espaço horizontal limitado das metrópoles.
+          </p>
+
+          <img
+            src="https://plus.unsplash.com/premium_photo-1663011691029-3b4a3d9960a3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QWdyaWN1bHR1cmElMjBWZXJ0aWNhbCUyMFVyYmFuYXxlbnwwfHwwfHx8MA%3D%3D"
+            alt="Agricultura Vertical Urbana"
+            class="article-image"
+          />
+
+          <h3>Como Funciona a Tecnologia</h3>
+          <p>
+            O coração da agricultura vertical é o cultivo sem solo de ambiente
+            controlado:
+          </p>
+          <ul>
+            <li>
+              <strong>Hidroponia ou Aeroponia:</strong> As raízes recebem uma
+              solução aquosa rica em nutrientes diretamente, o que reduz o uso
+              de água em até 95% em comparação com a agricultura tradicional.
+            </li>
+            <li>
+              <strong>Iluminação LED Customizada:</strong> Lâmpadas LED emitem
+              espectros específicos (tons de azul e vermelho) que aceleram a
+              fotossíntese, permitindo ciclos de cultivo rápidos e independentes
+              do clima.
+            </li>
+            <li>
+              <strong>Modularidade:</strong> Estruturas em blocos que podem ser
+              expandidos verticalmente, adaptando-se a subsolos, galpões
+              abandonados ou cozinhas residenciais.
+            </li>
+          </ul>
+
+          <h3>O Modelo de Negócio</h3>
+          <p>
+            As oportunidades dividem-se em produção comercial (venda de
+            hortaliças e microgreens de alto valor agregado diretamente para
+            restaurantes e mercados locais) e venda de sistemas modulares
+            domésticos baseados em refis e cápsulas de sementes recarregáveis.
+          </p>
+        </article>
+      </section>
+
+      <section id="regenerativa" class="content container">
+        <article class="blog-post">
+          <header>
+            <h2>
+              Guia de Agricultura Regenerativa: Restaurando o Planeta pelo Solo
+            </h2>
+            <p class="meta">Saúde do Solo &bull; Sequestro de Carbono</p>
+          </header>
+
+          <h3>O Conceito e a Ideia</h3>
+          <p>
+            A agricultura convencional tem degradado os solos globalmente. A
+            <strong>Agricultura Regenerativa</strong> propõe uma mudança de
+            paradigma: em vez de apenas reduzir danos, o objetivo é
+            <strong>restaurar ativamente os ecossistemas</strong>. A ideia
+            central é focar na saúde microbiológica do solo, na biodiversidade e
+            no aumento da capacidade da terra de reter água e sequestrar carbono
+            da atmosfera.
+          </p>
+          <img
+            src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QWdyaWN1bHR1cmElMjBSZWdlbmVyYXRpdmF8ZW58MHx8MHx8fDA%3D"
+            alt="Agricultura Regenerativa"
+            class="article-image"
+          />
+
+          <h3>Os Pilares Práticos do Manejo</h3>
+          <ol>
+            <li>
+              <strong>Perturbação Mínima do Solo:</strong> Reduzir ou eliminar a
+              aração para proteger as redes de fungos benéficos (micorrizas).
+            </li>
+            <li>
+              <strong>Cobertura Permanente:</strong> Manter o solo protegido com
+              plantas vivas ou palhada para evitar erosão e reter umidade.
+            </li>
+            <li>
+              <strong>Biodiversidade de Culturas:</strong> Substituir as
+              monoculturas pela rotação de culturas para quebrar ciclos de
+              pragas de forma natural.
+            </li>
+            <li>
+              <strong>Integração Animal:</strong> Incluir o gado em sistemas
+              rotacionados para fertilização natural do solo.
+            </li>
+          </ol>
+
+          <h3>O Modelo de Negócio e o Mercado de Carbono</h3>
+          <p>
+            Além da redução drástica de custos com insumos químicos, fazendas
+            regenerativas ganham dinheiro vendendo
+            <strong>créditos de carbono (Carbon Farming)</strong> para grandes
+            corporações que precisam mitigar suas pegadas ecológicas globais.
+          </p>
+        </article>
+      </section>
+
+      <section id="marketplace" class="content container">
+        <article class="blog-post">
+          <header>
+            <h2>
+              Marketplace de Proximidade: Conectando o Campo Direto à Mesa
+            </h2>
+            <p class="meta">Cadeia Curta &bull; Produtor Local</p>
+          </header>
+
+          <h3>O Conceito e a Ideia</h3>
+          <p>
+            A cadeia tradicional de distribuição de alimentos é longa e
+            ineficiente. O <strong>Marketplace de Proximidade</strong> usa a
+            tecnologia digital (aplicativos e plataformas web) para criar um
+            canal direto de venda, eliminando intermediários dispendiosos e
+            conectando pequenos produtores rurais a consumidores urbanos locais.
+          </p>
+
+          <img
+            src="https://plus.unsplash.com/premium_photo-1681841766171-fdb1554c909d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TWFya2V0cGxhY2UlMjBkZSUyMFByb3hpbWlkYWRlJTNBJTIwQ29uZWN0YW5kbyUyMG8lMjBDYW1wbyUyMERpcmV0byUyMCVDMyVBMCUyME1lc2F8ZW58MHx8MHx8fDA%3D"
+            alt="Marketplace de Proximidade"
+            class="article-image"
+          />
+
+          <h3>Como Funciona a Tecnologia e a Logística</h3>
+          <p>
+            Para viabilizar o fluxo financeiro e operacional, a plataforma se
+            apoia em:
+          </p>
+          <ul>
+            <li>
+              <strong>Geolocalização Dinâmica:</strong> Exibição de produtores
+              num raio restrito (ex: até 50km) para garantir alimentos frescos.
+            </li>
+            <li>
+              <strong>Hubs Coletivos:</strong> Pontos de retirada (Pick-up
+              Points) em bairros urbanos onde os produtores consolidam as
+              entregas do dia.
+            </li>
+            <li>
+              <strong>Transparência:</strong> Páginas dedicadas contando a
+              história, fotos da propriedade e métodos de cultivo de cada
+              produtor.
+            </li>
+          </ul>
+
+          <h3>O Modelo de Negócio</h3>
+          <p>
+            A monetização ocorre por meio de uma taxa de comissão sobre as
+            vendas (Take Rate) ou por clubes de assinatura de cestas semanais
+            recorrentes, trazendo previsibilidade financeira para o pequeno
+            agricultor.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          &copy; <span id="year"></span> Agrinho — Futuro sustentável da
+          agronomia.
+        </p>
+      </div>
+    </footer>
+
+    <script src="java.js"></script>
+  </body>
+</html>
